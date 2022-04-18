@@ -1,0 +1,27 @@
+### Budget Index
+GET http://localhost:3000/budgets
+
+### Budget Show
+GET http://localhost:3000/budgets/1
+
+### Budget Create
+POST http://localhost:3000/budgets
+Content-Type: application/json
+
+{
+  "user_id": 2,
+  "name": "Delete Me"
+}
+
+### Budget Update
+PATCH http://localhost:3000/budgets/4
+Content-Type: application/json
+
+{
+  "user_id": 1,
+  "name": "John Lennon's Budget"
+}
+
+### Budget Delete
+DELETE http://localhost:3000/budgets/4
+Content-Type: application/json
