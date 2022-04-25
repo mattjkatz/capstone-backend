@@ -1,3 +1,5 @@
+### ---------- BUDGETS ---------- ###
+
 ### Budget Index
 GET http://localhost:3000/budgets
 
@@ -24,4 +26,103 @@ Content-Type: application/json
 
 ### Budget Delete
 DELETE http://localhost:3000/budgets/4
+Content-Type: application/json
+
+### ---------- FINANCES ---------- ###
+
+### Finance Index
+GET http://localhost:3000/finances
+
+### Finance Show
+GET http://localhost:3000/finances/4
+
+### Finance Create
+POST http://localhost:3000/finances
+Content-Type: application/json
+
+{
+  "budget_id": 1,
+  "name": "Delete Me",
+  "amount": 200,
+  "category": "Dining out",
+  "frequency": "monthly",
+  "tracking": true,
+  "taxes": null
+}
+
+### Finance Update
+PATCH http://localhost:3000/finances/4
+Content-Type: application/json
+
+{
+  "name": "I Updated!!!",
+  "tracking": false
+}
+
+### Finance Delete
+DELETE http://localhost:3000/finances/4
+Content-Type: application/json
+
+### ---------- PURCHASES ---------- ###
+
+### Purchase Index
+GET http://localhost:3000/purchases
+
+### Purchase Show
+GET http://localhost:3000/purchases/1
+
+### Purchase Create
+POST http://localhost:3000/purchases
+Content-Type: application/json
+
+{
+  "finance_id": 3,
+  "name": "Donut",
+  "price": 1,
+  "category": "Dining Out",
+  "frequency": "one time"
+}
+
+### Purchase Update
+PATCH http://localhost:3000/purchases/4
+Content-Type: application/json
+
+{
+  "price": 2
+}
+
+### Purchase Delete
+DELETE http://localhost:3000/purchases/4
+Content-Type: application/json
+
+### ---------- USERS ---------- ###
+
+### User Index
+GET http://localhost:3000/users
+
+### User Show
+GET http://localhost:3000/users/1
+
+### User Create
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "first_name": "John",
+  "last_name": "Wayne",
+  "email": "johnwayne@test.com",
+  "password": "password",
+  "points": 10
+}
+
+### User Update
+PATCH http://localhost:3000/users/13
+Content-Type: application/json
+
+{
+  "points": 0
+}
+
+### User Delete
+DELETE http://localhost:3000/users/13
 Content-Type: application/json
