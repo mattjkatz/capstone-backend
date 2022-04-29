@@ -23,4 +23,6 @@ Rails.application.routes.draw do
   post "/users" => "users#create"
   patch "/users/:id" => "users#update"
   delete "/users/:id" => "users#destroy"
+  # Session CRUD routes
+  post "/sessions" => "sessions#create"
 end

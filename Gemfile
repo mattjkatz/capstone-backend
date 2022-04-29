@@ -16,6 +16,10 @@ gem 'seed_dump'
 
 gem "http"
 
+gem 'bcrypt', '~> 3.1.7'
+
+gem 'jwt'
+
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
 

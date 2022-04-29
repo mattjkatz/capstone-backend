@@ -1,3 +1,5 @@
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTEyODE2Mjl9.On8RDceFZEsIAgcOd5MF94km-NBzo69Xvs4mfgLi44s
+
 ### ---------- BUDGETS ---------- ###
 
 ### Budget Index
@@ -108,10 +110,11 @@ POST http://localhost:3000/users
 Content-Type: application/json
 
 {
-  "first_name": "John",
-  "last_name": "Wayne",
-  "email": "johnwayne@test.com",
+  "first_name": "matt",
+  "last_name": "matz",
+  "email": "matt@test.com",
   "password": "password",
+  "password_confirmation": "password",
   "points": 10
 }
 
@@ -126,3 +129,12 @@ Content-Type: application/json
 ### User Delete
 DELETE http://localhost:3000/users/13
 Content-Type: application/json
+
+### Sessions create (login)
+POST http://localhost:3000/sessions
+Content-Type: application/json
+
+{
+  "email": "email@test.com",
+  "password": "password"
+}
