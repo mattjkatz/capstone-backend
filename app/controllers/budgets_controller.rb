@@ -2,12 +2,12 @@ class BudgetsController < ApplicationController
 
   def index
     budgets = Budget.all
-    render json: budgets.as_json
+    render json: budgets
   end
 
   def show 
     budget = Budget.find(params[:id])
-    render json: budget.as_json
+    render json: budget
   end
 
   def create
@@ -16,7 +16,7 @@ class BudgetsController < ApplicationController
       name: params[:name]
     )
     budget.save
-    render json: budget.as_json
+    render json: budget
   end
 
   def update
