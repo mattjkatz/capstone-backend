@@ -2,12 +2,12 @@ class FinancesController < ApplicationController
 
   def index
     finances = Finance.all
-    render json: finances.as_json
+    render json: finances
   end
 
   def show 
     finance = Finance.find(params[:id])
-    render json: finance.as_json
+    render json: finance
   end
 
   def create
@@ -21,7 +21,7 @@ class FinancesController < ApplicationController
       taxes: params[:taxes]
     )
     finance.save
-    render json: finance.as_json
+    render json: finance
   end
 
   def update
