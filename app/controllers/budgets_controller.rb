@@ -15,8 +15,11 @@ class BudgetsController < ApplicationController
       user_id: params[:user_id],
       name: params[:name]
     )
-    budget.save
-    render json: budget
+    if budget.save
+      render json: budget
+    else
+      render json: { errors: budget.errors.full_messages }, status: :bad_request
+    end
   end
 
   def update

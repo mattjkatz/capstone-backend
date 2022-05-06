@@ -20,8 +20,11 @@ class FinancesController < ApplicationController
       tracking: params[:tracking],
       taxes: params[:taxes]
     )
-    finance.save
-    render json: finance
+    if finance.save
+      render json: finance
+    else
+      render json: { errors: finance.errors.full_messages }, status: :bad_request
+    end
   end
 
   def update
