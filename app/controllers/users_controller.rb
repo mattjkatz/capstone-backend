@@ -17,7 +17,7 @@ class UsersController < ApplicationController
       email: params[:email],
       password: params[:password],
       password_confirmation: params[:password_confirmation],
-      points: params[:points]
+      points: 0,
     )
     user.save
     render json: user.as_json
@@ -29,7 +29,7 @@ class UsersController < ApplicationController
     user.last_name = params[:last_name] || user.last_name
     user.email = params[:email] || user.email
     user.password = params[:password] || user.password
-    user.points = params[:points] || user.points
+    user.points = user.points
     user.save
     render json: user
   end
