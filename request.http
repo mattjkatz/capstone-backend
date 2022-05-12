@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTIzOTk4NzB9.6A-q_aizmTLpOP3Z-YbgRayqBMTz4N-D-HvoP-wXPQ4
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxNywiZXhwIjoxNjUyNDA4ODc1fQ.mxydd4YWg58JxmEowfzCw8DGVyhomrY2XHXQXX7rp5U
 
 ### ---------- BUDGETS ---------- ###
 
@@ -7,15 +7,16 @@ GET http://localhost:3000/budgets
 Authorization: Bearer {{jwt}}
 
 ### Budget Show
-GET http://localhost:3000/budgets/1
+GET http://localhost:3000/budgets/17
+Authorization: Bearer {{jwt}}
 
 ### Budget Create
 POST http://localhost:3000/budgets
+Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
-  "user_id": 2,
-  "name": "Delete Me"
+  "name": "CAROLE BASKIN"
 }
 
 ### Budget Update
@@ -136,6 +137,6 @@ POST http://localhost:3000/sessions
 Content-Type: application/json
 
 {
-  "email": "email@test.com",
+  "email": "carole@test.com",
   "password": "password"
 }

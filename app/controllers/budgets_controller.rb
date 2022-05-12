@@ -14,8 +14,13 @@ class BudgetsController < ApplicationController
   def create
     budget = Budget.new(
       user_id: current_user.id,
-      name: params[:name]
+      name: params[:name],
     )
+    if current_user.budgets.length < 1
+      budget.real = true
+    else
+      budget.real = false
+    end
     if budget.save
       render json: budget
     else
