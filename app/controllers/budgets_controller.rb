@@ -6,13 +6,13 @@ class BudgetsController < ApplicationController
   end
 
   def show 
-    budget = Budget.find(params[:id])
+    budget = current_user.budgets.where(id: params[:id])
     render json: budget
   end
 
   def create
     budget = Budget.new(
-      user_id: params[:user_id],
+      user_id: current_user.id,
       name: params[:name]
     )
     if budget.save
