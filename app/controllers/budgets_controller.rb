@@ -1,7 +1,7 @@
 class BudgetsController < ApplicationController
 
   def index
-    budgets = Budget.all
+    budgets = current_user.budgets
     render json: budgets
   end
 

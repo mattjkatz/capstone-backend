@@ -1,9 +1,10 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTEyODE2Mjl9.On8RDceFZEsIAgcOd5MF94km-NBzo69Xvs4mfgLi44s
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTIzOTk4NzB9.6A-q_aizmTLpOP3Z-YbgRayqBMTz4N-D-HvoP-wXPQ4
 
 ### ---------- BUDGETS ---------- ###
 
 ### Budget Index
 GET http://localhost:3000/budgets
+Authorization: Bearer {{jwt}}
 
 ### Budget Show
 GET http://localhost:3000/budgets/1
