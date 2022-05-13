@@ -9,4 +9,8 @@ class Finance < ApplicationRecord
   belongs_to :budget
   has_many :purchases
 
+  def friendly_created_at
+    created_at.strftime("%B %e, %Y")
+  end
+
 end
