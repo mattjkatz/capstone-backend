@@ -12,7 +12,7 @@ class FinancesController < ApplicationController
 
   def create
     finance = Finance.new(
-      budget_id: params[:budget_id],
+      budget_id: current_user.budgets[0].id,
       name: params[:name],
       amount: params[:amount],
       category: params[:category],
