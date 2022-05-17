@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxNywiZXhwIjoxNjUyNzE2OTY5fQ.dX3f4QAiraJdFEp3f3dmw2GEFdXl7ClU8KElTxNQWQw
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTI4ODg4NjN9.I9f7I8-NqNCuNE_na_qigRY7hAKr_4uCpYidfTaKoBs
 
 ### ---------- BUDGETS ---------- ###
 
@@ -42,16 +42,14 @@ GET http://localhost:3000/finances/4
 
 ### Finance Create
 POST http://localhost:3000/finances
+Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
-  "budget_id": 1,
   "name": "Delete Me",
   "amount": 200,
-  "category": "Dining out",
   "frequency": "monthly",
-  "tracking": true,
-  "taxes": null
+  "transaction_type": "income"
 }
 
 ### Finance Update
@@ -137,6 +135,6 @@ POST http://localhost:3000/sessions
 Content-Type: application/json
 
 {
-  "email": "carole@test.com",
+  "email": "email@test.com",
   "password": "password"
 }

@@ -1,4 +1,5 @@
 class FinancesController < ApplicationController
+  before_action :authenticate_user
 
   def index
     finances = Finance.all
@@ -12,7 +13,7 @@ class FinancesController < ApplicationController
 
   def create
     finance = Finance.new(
-      budget_id: current_user.budgets[0].id,
+      budget_id: (current_user.budgets.detect {|budget| budget["real"] == true }).id,
       name: params[:name],
       amount: params[:amount],
       category: params[:category],

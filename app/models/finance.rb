@@ -1,7 +1,6 @@
 class Finance < ApplicationRecord
 
   validates :name, presence: true
-  validates :name, uniqueness: true
   validates :amount, presence: true
   validates :frequency, presence: true
 
