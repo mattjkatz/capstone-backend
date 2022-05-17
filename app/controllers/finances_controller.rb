@@ -18,7 +18,8 @@ class FinancesController < ApplicationController
       category: params[:category],
       frequency: params[:frequency],
       tracking: params[:tracking],
-      taxes: params[:taxes]
+      taxes: params[:taxes],
+      transaction_type: params[:transaction_type],
     )
     if finance.save
       render json: finance
