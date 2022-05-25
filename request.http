@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTI4ODg4NjN9.I9f7I8-NqNCuNE_na_qigRY7hAKr_4uCpYidfTaKoBs
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyOCwiZXhwIjoxNjUzMDU3NjIwfQ.fVfAr6bt3FqghvJ_Cq4PM1tVQDi8MhJPSiogHyqfEkg
 
 ### ---------- BUDGETS ---------- ###
 
@@ -135,6 +135,6 @@ POST http://localhost:3000/sessions
 Content-Type: application/json
 
 {
-  "email": "email@test.com",
-  "password": "password"
+  "email": "max@2test.com",
+  "password": "dog"
 }
